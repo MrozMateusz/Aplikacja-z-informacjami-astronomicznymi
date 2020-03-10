@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+}
+
+group 'Mateusz Mróz'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile 'org.jsoup:jsoup:1.12.1'
+    compile group: 'commons-io', name: 'commons-io', version: '2.0.1'
+    testCompile(group: "org.testfx", name: "testfx-core", version: "4.0.13-alpha")
+    testCompile(group: "org.testfx", name: "testfx-junit", version: "4.0.13-alpha")
+    testCompile(group: 'junit', name: 'junit', version: '4.12')
+}
+
+apply plugin: 'application'
+
+
+sourceSets.main.resources {
+    srcDirs = ["src/main/resources"]
+}
+
+mainClassName = 'application.Main'

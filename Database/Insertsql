@@ -1,0 +1,26 @@
+INSERT INTO Satellities VALUES(1,'INMARSAT GX5','2019-080B','Geostationary','https://www.n2yo.com/satellite/?s=44801','35794.4 km', '35791.9 km', '0.1 °');
+
+INSERT INTO Satellities VALUES(2,'INMARSAT GX5','2019-080B','Geostationary','https://www.n2yo.com/satellite/?s=44801','35798.5 km', '35789.7 km', '0.0 °');
+
+INSERT INTO Satellities VALUES(3,'TIBA-1','2019-080A','Geostationary','https://www.n2yo.com/satellite/?s=44800','35800.9 km', '35786.4 km', '0.0 °');
+
+INSERT INTO Archive_position_sat VALUES(1,'2020-01-03 13:27:20' ,'83.9 ° E', 1);
+INSERT INTO Archive_position_sat VALUES(2,'2020-01-04 14:47:28' ,'35.4 ° E', 3);
+INSERT INTO Archive_position_sat VALUES(3,'2020-01-04 19:47:28' ,'43.4 ° E', 2);
+
+
+INSERT INTO Planets VALUES(1,'Venus', 'terrestrial', '462 °C', 'https://theskylive.com/venus-info','187311554 km','4.87','Sun');
+INSERT INTO Planets VALUES(2,'Jupiter', 'terrestrial', '-110 °C', 'https://theskylive.com/jupiter-info','925,488,594 km','1898','Sun');
+INSERT INTO Planets VALUES(3,'Mercury', 'terrestrial', '167 °C', 'https://theskylive.com/mercury-info','214,019,068 km','0.330','Sun');
+INSERT INTO Planets VALUES(4,'Mars', 'terrestrial', '-65 °C', 'https://theskylive.com/mars-info','316,310,199 km','0.642','Sun');
+INSERT INTO Planets VALUES(5,'Uranus', 'ice giant', '-195 °C', 'https://theskylive.com/uranus-info','2,928,320,877 km','86.8','Sun');
+INSERT INTO Planets VALUES(6,'Neptune', 'ice giant', '-200 °C', 'https://theskylive.com/neptune-info','4,556,864,494 km','102','Sun');
+INSERT INTO Planets VALUES(7,'Saturn', 'gas planet', '-140 °C', 'https://theskylive.com/saturn-info','1,647,884,488 km','568','Sun');
+
+INSERT INTO Archive_position_planet VALUES(1,'2020-01-05 13:27:22' ,'-16° 35’ 19”', 1);
+INSERT INTO Archive_position_planet VALUES(2,'2020-01-10 13:43:17' ,'-23° 05’ 03”', 2); 
+INSERT INTO Archive_position_planet VALUES(3,'2020-01-10 13:52:28' ,'-23° 56’ 04”', 3); 
+INSERT INTO Archive_position_planet VALUES(4,'2020-01-10 13:53:26' ,'-20° 47’ 15”', 4); 
+INSERT INTO Archive_position_planet VALUES(5,'2020-01-10 13:55:30' ,'+11° 50’ 12”', 5); 
+INSERT INTO Archive_position_planet VALUES(6,'2020-01-10 14:12:20' ,'-06° 23’ 13”', 6); 
+INSERT INTO Archive_position_planet VALUES(7,'2020-01-10 14:20:26' ,'-21° 33’ 35”', 7);

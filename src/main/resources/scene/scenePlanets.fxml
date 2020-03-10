@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Planets.PlanetsScreenController">
+   <children>
+      <AnchorPane fx:id="changeScreentoSatellities" maxHeight="-1.0" maxWidth="-1.0" prefHeight="800.0" prefWidth="1290.0" VBox.vgrow="ALWAYS">
+         <children>
+            <ImageView fitHeight="800.0" fitWidth="1280.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../picture/Photo%20by%20Banter%20Snaps%20on%20Unsplash.jpg" />
+               </image>
+            </ImageView>
+            <Button fx:id="buttonADD" layoutX="250.0" layoutY="335.0" mnemonicParsing="false" onAction="#setButtonADD" text="Add" />
+            <Button fx:id="buttonALT" layoutX="483.0" layoutY="298.0" mnemonicParsing="false" onAction="#setButtonALT" text="Modify Planet" />
+            <Button fx:id="buttonDEL" layoutX="345.0" layoutY="335.0" mnemonicParsing="false" onAction="#deleteRow" text="Delete" />
+            <TextField fx:id="TextField1" editable="false" layoutX="315.0" layoutY="532.0" />
+            <TextField fx:id="TextField2" editable="false" layoutX="315.0" layoutY="583.0" />
+            <TextField fx:id="TextField3" editable="false" layoutX="315.0" layoutY="642.0" />
+            <TextField fx:id="TextField4" editable="false" layoutX="559.0" layoutY="480.0" />
+            <TextField fx:id="TextField5" editable="false" layoutX="559.0" layoutY="537.0" />
+            <TextField fx:id="TextField6" editable="false" layoutX="559.0" layoutY="594.0" />
+            <TextField fx:id="TextField7" editable="false" layoutX="767.0" layoutY="530.0" />
+            <TextField fx:id="TextField8" editable="false" layoutX="767.0" layoutY="590.0" />
+            <TextField fx:id="TextField9" editable="false" layoutX="315.0" layoutY="481.0" />
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="314.0" layoutY="526.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" wrappingWidth="52.00000762939453" />
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="315.0" layoutY="578.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type" textAlignment="CENTER" />
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="315.0" layoutY="634.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Temperature (°C)" textAlignment="CENTER" />
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="563.0" layoutY="475.0" strokeType="OUTSIDE" strokeWidth="0.0" text="URL" textAlignment="CENTER" />
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="560.0" layoutY="533.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DATE" textAlignment="CENTER" />
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="772.0" layoutY="585.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Declination" textAlignment="CENTER" />
+            <Button fx:id="Ok" disable="true" layoutX="546.0" layoutY="700.0" mnemonicParsing="false" onAction="#setOk" text="OK" />
+            <Button fx:id="GTS" layoutX="980.0" layoutY="687.0" mnemonicParsing="false" onAction="#changeScreentoSatellities" text="Go to Satellities" />
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="564.0" layoutY="587.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Distance From Earth (km)" textAlignment="CENTER" />
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="772.0" layoutY="523.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Center Star" textAlignment="CENTER" />
+            <Button fx:id="select" layoutX="861.0" layoutY="315.0" mnemonicParsing="false" onAction="#refreshTable" text="Select Choice" />
+            <ChoiceBox fx:id="choiceBox" layoutX="965.0" layoutY="315.0" prefWidth="150.0" />
+            <Text fill="RED" layoutX="498.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PLANETS VIEW" textAlignment="CENTER" underline="true">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Text>
+            <TableView fx:id="tableView" layoutX="129.0" layoutY="78.0" onMousePressed="#Selected" prefHeight="203.0" prefWidth="1029.0" AnchorPane.rightAnchor="122.0">
+               <columns>
+                  <TableColumn fx:id="id" maxWidth="50.0" minWidth="9.999984741210938" prefWidth="44.99998474121094" resizable="false" text="ID" />
+                  <TableColumn fx:id="name" maxWidth="150.0" minWidth="100.0" prefWidth="125.0" resizable="false" text="Name" />
+                  <TableColumn fx:id="typ" maxWidth="171.0" minWidth="80.0" prefWidth="151.0" resizable="false" text="Type" />
+                  <TableColumn fx:id="temp" maxWidth="150.0" minWidth="80.0" prefWidth="121.0" resizable="false" text="Temperature (°C)" />
+                  <TableColumn fx:id="mass" maxWidth="158.0" minWidth="53.0" prefWidth="126.0" resizable="false" text="Mass (10^24 kg)" />
+                  <TableColumn fx:id="CS" maxWidth="206.0" minWidth="59.0" prefWidth="170.0" resizable="false" text="Center Star" />
+                  <TableColumn fx:id="dat" maxWidth="204.0" minWidth="59.0" prefWidth="140.0" resizable="false" text="DATA" />
+                  <TableColumn fx:id="dec" maxWidth="200.0" minWidth="59.0" prefWidth="127.0" resizable="false" text="Declination" />
+               </columns>
+            </TableView>
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="314.0" layoutY="475.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" wrappingWidth="52.00000762939453" />
+            <Button fx:id="Cancel" disable="true" layoutX="595.0" layoutY="700.0" mnemonicParsing="false" onAction="#setCancel" text="Cancel" />
+            <Button fx:id="All" layoutX="777.0" layoutY="315.0" mnemonicParsing="false" onAction="#AllPlanet" text="ALL Planets" />
+            <TextField fx:id="TextFieldError" editable="false" layoutX="740.0" layoutY="742.0" />
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="731.0" layoutY="738.0" strokeType="OUTSIDE" strokeWidth="0.0" text="System Message:" textAlignment="CENTER">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Text>
+            <TextField fx:id="TextField10" editable="false" layoutX="559.0" layoutY="645.0" />
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="564.0" layoutY="640.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mass (10^24 kg)" textAlignment="CENTER" />
+            <Button fx:id="buttonCSV" layoutX="46.0" layoutY="711.0" mnemonicParsing="false" onAction="#CSVButtonALL" text="Create CSV ALL Planets" />
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="18.0" layoutY="765.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Remember to close Planets CSV file," textAlignment="CENTER" wrappingWidth="274.462890625">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="88.0" layoutY="782.0" strokeType="OUTSIDE" strokeWidth="0.0" text="before create new CSV!" textAlignment="CENTER">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Text>
+            <Button fx:id="buttonCSVSelected" layoutX="193.0" layoutY="711.0" mnemonicParsing="false" onAction="#CSVButtonSelected" text="Create CSV Selected Planet" />
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="48.0" layoutY="704.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CSV is save on Desktop!" textAlignment="CENTER" wrappingWidth="274.462890625">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Text>
+            <Button fx:id="buttonALTPos" layoutX="439.0" layoutY="337.0" mnemonicParsing="false" onAction="#setButtonALTValue" text="Modify\Add new planet value" />
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="378.0" layoutY="379.0" strokeType="OUTSIDE" strokeWidth="0.0" text="It will save new planet with same name." textAlignment="CENTER" wrappingWidth="274.462890625">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+            <Button fx:id="GOTO" layoutX="503.0" layoutY="480.0" mnemonicParsing="false" onAction="#GoURL" text="Go To:" />
+            <Text fx:id="Text" fill="RED" fontSmoothingType="LCD" layoutX="333.0" layoutY="475.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" textAlignment="CENTER" visible="false">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <Text fx:id="Text1" fill="RED" fontSmoothingType="LCD" layoutX="349.0" layoutY="530.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" textAlignment="CENTER" visible="false">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <Text fx:id="Text2" fill="RED" fontSmoothingType="LCD" layoutX="345.0" layoutY="581.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" textAlignment="CENTER" visible="false">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <Text fx:id="Text3" fill="RED" fontSmoothingType="LCD" layoutX="431.0" layoutY="636.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" textAlignment="CENTER" visible="false">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <Text fx:id="Text4" fill="RED" fontSmoothingType="LCD" layoutX="587.0" layoutY="477.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" textAlignment="CENTER" visible="false">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <Text fx:id="Text5" fill="RED" fontSmoothingType="LCD" layoutX="591.0" layoutY="527.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" textAlignment="CENTER" visible="false">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <Text fx:id="Text6" fill="RED" fontSmoothingType="LCD" layoutX="718.0" layoutY="587.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" textAlignment="CENTER" visible="false">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <Text fx:id="Text7" fill="RED" fontSmoothingType="LCD" layoutX="673.0" layoutY="638.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" textAlignment="CENTER" visible="false">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <Text fx:id="Text8" fill="RED" fontSmoothingType="LCD" layoutX="836.0" layoutY="523.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" textAlignment="CENTER" visible="false">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <Text fx:id="Text9" fill="RED" fontSmoothingType="LCD" layoutX="853.0" layoutY="584.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" textAlignment="CENTER" visible="false">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <Button fx:id="net" layoutX="154.0" layoutY="410.0" mnemonicParsing="false" onAction="#netPlanet" opacity="1.0" text="Update data from Web" />
+            <Button fx:id="buttonCSVtoDatab" layoutX="1104.0" layoutY="747.0" mnemonicParsing="false" onAction="#CSVButtonALLtoDatabase" text="Create CSV To Database" />
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="1037.0" layoutY="741.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CSV is save on Desktop!" textAlignment="CENTER" wrappingWidth="274.462890625">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Text>
+            <CheckBox fx:id="checkbox" disable="true" layoutX="18.0" layoutY="414.0" mnemonicParsing="false" onAction="#AutoUpd" text="Auto Refreshing Data" textAlignment="CENTER" textFill="WHITE" />
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="503.0" layoutY="517.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Use url from: https://theskylive.com/" textAlignment="CENTER" wrappingWidth="274.462890625">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="52.0" layoutY="453.0" strokeType="OUTSIDE" strokeWidth="0.0" text="It will update distance from Earth and declination" textAlignment="CENTER" wrappingWidth="274.462890625">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+            <Button fx:id="GOTODF" layoutX="617.0" layoutY="507.0" mnemonicParsing="false" onAction="#GoURLHyperlinkPL" opacity="0.0" prefHeight="13.0" prefWidth="107.0">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Button>
+            <CheckBox fx:id="checkboxCSV" layoutX="14.0" layoutY="670.0" mnemonicParsing="false" onAction="#AutoSaveCSV" text="Auto Create CSV" textAlignment="CENTER" textFill="WHITE" />
+            <Button fx:id="help2" layoutX="699.0" layoutY="571.0" mnemonicParsing="false" onAction="#setHelp2" prefHeight="13.0" prefWidth="7.0" text="?">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Button fx:id="help3" layoutX="653.0" layoutY="624.0" mnemonicParsing="false" onAction="#setHelp3" prefHeight="13.0" prefWidth="7.0" text="?">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Button fx:id="help4" layoutX="833.0" layoutY="567.0" mnemonicParsing="false" onAction="#setHelp4" prefHeight="13.0" prefWidth="7.0" text="?">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Button fx:id="help1" layoutX="405.0" layoutY="618.0" mnemonicParsing="false" onAction="#setHelp1" prefHeight="13.0" prefWidth="7.0" text="?">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <TextField fx:id="TextFieldHelp" editable="false" layoutX="1027.0" layoutY="514.0" prefHeight="32.0" prefWidth="199.0" visible="false" />
+            <Text fx:id="helpText" fill="WHITE" fontSmoothingType="LCD" layoutX="1020.0" layoutY="509.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Help:" textAlignment="CENTER" visible="false">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Text>
+            <Button fx:id="helpclos" layoutX="1206.0" layoutY="492.0" mnemonicParsing="false" onAction="#closehelp" prefHeight="13.0" prefWidth="7.0" text="X" visible="false">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
